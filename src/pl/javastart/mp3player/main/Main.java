@@ -1,9 +1,11 @@
 package pl.javastart.mp3player.main;
 	
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
 
 
 public class Main extends Application {
@@ -11,9 +13,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		final String appName = "Mp3Player v0.1";
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			Parent parent = (Parent)FXMLLoader.load(getClass().getResource("/pl/javastart/mp3player/view/MainPane.fxml"));
+			
+			Scene scene = new Scene(parent);
+			
 			primaryStage.setTitle(appName);
 			primaryStage.setScene(scene);
 			primaryStage.show();
