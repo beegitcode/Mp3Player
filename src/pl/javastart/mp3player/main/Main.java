@@ -1,4 +1,4 @@
-package application;
+package pl.javastart.mp3player.main;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
